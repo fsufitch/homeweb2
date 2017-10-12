@@ -59,3 +59,9 @@ typings/
 
 # Glide vendor folder
 vendor/
+
+# ATL cache
+.awcache/
+
+# Destination for built artifacts
+dist/
