@@ -8,7 +8,7 @@ import (
 	"gopkg.in/urfave/cli.v1"
 )
 
-// RunCommand runs the command line interface for gw2slots
+// RunCommand runs the command line interface for homeweb2
 func RunCommand() {
 	app := cli.NewApp()
 	app.Name = "homeweb2"

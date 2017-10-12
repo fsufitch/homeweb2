@@ -1,14 +1,6 @@
 hash: 8f5eeca21d15f3b3cc8c11435b905962f756e5d06eadba1e8e42e3d5b9222af3
 updated: 2017-10-12T11:56:36.941972043-04:00
 imports:
-- name: github.com/fsufitch/gw2slots
-  version: 2cfa429ee9158782178caad303b0211505b76ebc
-  subpackages:
-  - server/auth
-  - server/db
-  - server/db/migration
-  - server/gw2api
-  - server/handlers
 - name: github.com/gorilla/context
   version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
 - name: github.com/gorilla/mux
