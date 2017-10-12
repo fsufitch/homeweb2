@@ -71,5 +71,8 @@
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.3",
     "zone.js": "^0.8.17"
+  },
+  "engines": {
+    "node": "8.7.0"
   }
 }
