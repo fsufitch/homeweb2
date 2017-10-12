@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import {
+  ActionDispatcher,
+  NavigationStateService,
+  SetSideNavClosedAction,
+} from 'homeweb-ui/store';
+
 @Component({
   selector: 'navigation',
   template: require('./navigation.component.html'),
@@ -9,9 +15,15 @@ import { Observable } from 'rxjs';
   ],
 })
 export class NavigationComponent {
-  closed = false;
+  constructor(
+    private dispatcher: ActionDispatcher,
+    private navigationStateService: NavigationStateService,
+  ) {}
+  closed$ = this.navigationStateService.getSideNavClosed();
 
-  ngOnInit() {
-    Observable.timer(0, 2000).subscribe(() => this.closed = !this.closed);
+  toggleSideNav() {
+    this.closed$.take(1).subscribe(closed => this.dispatcher.dispatch(
+      new SetSideNavClosedAction({closed: !closed})
+    ));
   }
 }

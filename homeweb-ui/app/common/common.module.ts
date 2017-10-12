@@ -7,12 +7,14 @@ import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 
 import { IconComponent } from './icon.component';
+import { StoreModule } from 'homeweb-ui/store';
 
 const IMPORT_EXPORT = [
   BrowserModule,
   BrowserAnimationsModule,
   HttpModule,
   FormsModule,
+  StoreModule,
 ]
 
 

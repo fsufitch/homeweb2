@@ -16,6 +16,8 @@ $nav-toggle-size: 64px;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+
+  cursor: pointer;
 }
 
 .slide-nav {
@@ -46,4 +48,23 @@ $nav-toggle-size: 64px;
   .nav-container {
     margin: 1em;
   }
+}
+
+.nav-overlay {
+  background: #222;
+  opacity: 0.5;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+
+  z-index: 900;
+
+  &.closed {
+    display: none;
+  }
+
+  cursor: pointer;
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
-import { fancySidebarInit } from './fancy-sidebar';
+import { ActionDispatcher, AppStartAction } from 'homeweb-ui/store';
 
 @Component({
   selector: 'ng2app',
@@ -8,7 +8,9 @@ import { fancySidebarInit } from './fancy-sidebar';
   styles: [],
 })
 export class RootComponent implements OnInit {
+  constructor(private dispatcher: ActionDispatcher) {}
+
   ngOnInit() {
-    fancySidebarInit();
+    this.dispatcher.dispatch(new AppStartAction());
   }
 }

@@ -11,12 +11,12 @@ import '@angular/router';
 
 import '@angular/platform-browser/animations';
 
-// import '@ngrx/core';
-// import '@ngrx/store';
-// import '@ngrx/effects';
-// import '@ngrx/core/add/operator/select';
+import '@ngrx/core';
+import '@ngrx/store';
+import '@ngrx/effects';
+import '@ngrx/core/add/operator/select';
 import 'rxjs/Rx';
-// import 'immutable';
+import 'immutable';
 
 import 'moment';
 
