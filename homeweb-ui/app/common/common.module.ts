@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 
 import { IconComponent } from './icon.component';
+import { CloseNavigationGuard } from './close-navigation.guard';
 import { StoreModule } from 'homeweb-ui/store';
 
 const IMPORT_EXPORT = [
@@ -23,6 +24,7 @@ const IMPORT_EXPORT = [
     ...IMPORT_EXPORT,
   ],
   providers: [
+    CloseNavigationGuard,
   ],
   declarations: [
     IconComponent,

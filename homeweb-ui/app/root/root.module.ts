@@ -2,15 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { CommonModule } from 'homeweb-ui/app/common';
+import { BoringModule } from 'homeweb-ui/app/boring';
 
 import { RootComponent } from './root.component';
 import { NavigationComponent } from './navigation';
-import { ROUTES } from './routes';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(ROUTES),
+    BoringModule,
+    RouterModule.forRoot([], {useHash: false}),
   ],
   declarations: [
     RootComponent,
