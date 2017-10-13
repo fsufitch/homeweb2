@@ -25,6 +25,8 @@ export class NavigationComponent {
   private activeSection$ = this.navigationStateService.getActiveSection();
   homeActive$ = this.activeSection$.map(s => s === NavigationActiveSection.Home);
   aboutMeActive$ = this.activeSection$.map(s => s === NavigationActiveSection.AboutMe);
+  projectsActive$ = this.activeSection$.map(s => s === NavigationActiveSection.Projects);
+  resumeActive$ = this.activeSection$.map(s => s === NavigationActiveSection.Resume);
 
   toggleSideNav() {
     this.closed$.take(1).subscribe(closed => this.dispatcher.dispatch(

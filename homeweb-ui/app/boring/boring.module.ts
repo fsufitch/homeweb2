@@ -6,6 +6,8 @@ import { CommonModule } from 'homeweb-ui/app/common';
 import { ROUTES } from './boring.routes';
 import { HomepageComponent } from './homepage';
 import { AboutComponent } from './about';
+import { ProjectsComponent } from './projects';
+import { ResumeComponent } from './resume';
 
 @NgModule({
   imports: [
@@ -15,6 +17,8 @@ import { AboutComponent } from './about';
   declarations: [
     HomepageComponent,
     AboutComponent,
+    ProjectsComponent,
+    ResumeComponent,
   ],
 })
 export class BoringModule {}
