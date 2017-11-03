@@ -1,7 +1,7 @@
 node {
   stage 'Verify Environment' {
-    def goAvailable = 0 == sh returnStatus: true, script: 'go version'
-    if (!goAvailable) {
+    def goStatus = sh returnStatus: true, script: 'go version'
+    if (!goStatus) {
       error 'Go build environment not available'
     }
   }
